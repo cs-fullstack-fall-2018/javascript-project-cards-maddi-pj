@@ -63,16 +63,28 @@ player2Deck = player1Deck.splice(1, 26);
 console.log(player1Deck);
 console.log(player2Deck);
 
-//Function to randomly grab cards for player
-var pcv = Math.floor(Math.random() * player1Deck.length);
-var player1Card = player1Deck[pcv];
+// //Function to randomly grab cards for player
+// var pcv = Math.floor(Math.random() * player1Deck.length);
+// var player1Card = player1Deck[pcv];
+//
+// var pcv2 = Math.floor(Math.random() * player2Deck.length);
+// var player2Card = player2Deck[pcv2];
 
-var pcv2 = Math.floor(Math.random() * player2Deck.length);
-var player2Card = player2Deck[pcv2];
+var player1Card;
+var player2Card;
+var pcv;
+var pcv2;
 
-function grabRand1 (player1Card) {
+function grabRand1 () {
 
-    return player1Card + player2Card;
+    // return player1Card + player2Card;
+    //Function to randomly grab cards for player
+    pcv = Math.floor(Math.random() * player1Deck.length);
+    player1Card = player1Deck[pcv];
+
+    pcv2 = Math.floor(Math.random() * player2Deck.length);
+    player2Card = player2Deck[pcv2];
+
 }
 
 // function grabRan2 (player2Card){
