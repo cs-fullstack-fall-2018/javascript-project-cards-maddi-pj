@@ -1,7 +1,14 @@
 
-if (){
-    
-}
+if (player1Card.cardNumber>player2Card.cardNumber)
+    {
+        console.log("Player 1 wins");
+        console.log("Player 1: ", player1Card, "Player 2: ", player2Card);
+    }
+else
+    {
+        console.log("Player 2 wins");
+        console.log("Player 2: ", player2Card, "Player 1: ", player1Card)
+    }
 
 // function main() {
 //     let cards = new Array();
