@@ -11,13 +11,20 @@ function winner()
             console.log("Player 1: ", player1Card, "Player 2: ", player2Card);
             score1=score1+1;
             document.getElementById("P1Score").innerText=score1;
+            player1Deck.splice(player1Card,1);
+            player2Deck.splice(player2Card,1);
+            console.log(player1Deck)
         }
+        
     else
         {
             console.log("Player 2 wins");
             console.log("Player 2: ", player2Card, "Player 1: ", player1Card);
             score2=score2+1;
             document.getElementById("P2Score").innerText=score2;
+            player1Deck.splice(player1Card,1);
+            player2Deck.splice(player2Card,1);
+            console.log(player2Deck)
         }
 }
 
