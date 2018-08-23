@@ -12,10 +12,15 @@ function winner()
             console.log("Player 1: ", player1Card, "Player 2: ", player2Card);
             score1=score1+1;
             document.getElementById("P1Score").innerText=score1;
+            var writeOut1 = (player1Card.cardNumber + " of " + player1Card.type);
+            var writeOut2 = (player2Card.cardNumber + " of " + player2Card.type);
+            document.getElementById("cardIndex1").innerHTML=writeOut1;
+
+            document.getElementById("cardIndex2").innerHTML=writeOut2;
+
             player1Deck.splice(pcv,1);
             player2Deck.splice(pcv2,1);
             console.log(player1Deck);
-
         }
 
     else
@@ -24,6 +29,10 @@ function winner()
             console.log("Player 2: ", player2Card, "Player 1: ", player1Card);
             score2=score2+1;
             document.getElementById("P2Score").innerText=score2;
+            var writeOut1 = (player1Card.cardNumber + " of " + player1Card.type);
+            var writeOut2 = (player2Card.cardNumber + " of " + player2Card.type);
+            document.getElementById("cardIndex1").innerHTML=writeOut1;
+            document.getElementById("cardIndex2").innerHTML=writeOut2;
             player1Deck.splice(pcv,1);
             player2Deck.splice(pcv2,1);
             console.log(player2Deck);

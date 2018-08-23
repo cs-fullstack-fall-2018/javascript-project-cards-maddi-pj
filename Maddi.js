@@ -96,7 +96,7 @@ function grabRand1 () {
 function reset() {
     var cards = new Array();
     var typeArray = ["s", "d", "c", "h"];
-    var cardNumberArray = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"];
+    var cardNumberArray = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
     for (let i = 0; i < typeArray.length; i++) {
         for (let x = 0; x < cardNumberArray.length; x++) {
@@ -111,8 +111,8 @@ function reset() {
         let tmp = cards[rand1];
         cards[rand1] = cards[rand2];
         cards[rand2] = tmp;
-        var player1Deck = [];
-        var player2Deck = [];
+        player1Deck = [];
+        player2Deck = [];
 
         player1Deck = cards.slice();
         player2Deck = player1Deck.splice(1, 26);
@@ -121,6 +121,9 @@ function reset() {
 
     document.getElementById("P1Score").innerText=0;
     document.getElementById("P2Score").innerText=0;
+    document.getElementById("cardIndex1").innerText="-";
+    document.getElementById("cardIndex2").innerText="-";
+
     score1=0;
     score2=0;
     console.log(player1Deck);

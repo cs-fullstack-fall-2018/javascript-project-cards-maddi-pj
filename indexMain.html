@@ -2,23 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Greater Than</title>
+    <link href="master.css" rel="stylesheet">
 </head>
 <body>
-<h1 align="center">Card Game</h1>
-<div>
+<header><h1 align="center">Card Game</h1></header>
+<div id="main">
+
+    <article>
+        <div align="center">
+            <input align="left" type="button" value="Player1 Pull" id="P1Button">
+            <!--<input align="right" type="button" value="Player2 Pull" id="P2Button">-->
+            <input type="button" value="reset" id="reset">
+        </div>
+    </article>
+
+    <nav>
+    <div>
     <h2 align="left"> Player1 Score</h2>
+    <h2 align="left">Score: <span id="P1Score">0</span></h2>
+    <h2 align="left">Your Card is <span id="cardIndex1" style="color: black">-</span></h2>
+    </div>
+    </nav>
+
+
+    <aside>
+    <div>
     <h2 align="right"> Player2 Score</h2>
-<h2 align="left">Score: <span id="P1Score">0</span></h2>
-<h2 align="right">Score: <span id="P2Score">0</span></h2>
+    <h2 align="right">Score: <span id="P2Score">0</span></h2>
+    <h2 align="right">Your Card is <span id="cardIndex2" style="color: black">-</span></h2>
+    </div>
+    </aside>
 </div>
-<div>
-    <input align="left" type="button" value="Player1 Pull" id="P1Button">
-    <!--<input align="right" type="button" value="Player2 Pull" id="P2Button">-->
-</div>
-<div>
-    <input type="button" value="reset" id="reset">
-</div>
+
+
+<footer><div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> A Maddi and Pj's site Website</div>
+</footer>
+
 </body>
 <script src="Maddi.js"></script>
 <script src="cGPJ.js"></script>
