@@ -121,6 +121,8 @@ function reset() {
 
     document.getElementById("P1Score").innerText=0;
     document.getElementById("P2Score").innerText=0;
+    score1=0;
+    score2=0;
     console.log(player1Deck);
     console.log(player2Deck);
 }
