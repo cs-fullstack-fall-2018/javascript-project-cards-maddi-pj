@@ -64,8 +64,10 @@ console.log(player1Deck);
 console.log(player2Deck);
 
 //Function to randomly grab cards for player
-var player1Card = Math.floor(Math.random() * player1Deck.length);
-var player2Card = Math.floor(Math.random() * player2Deck.length);
+var pcv = Math.floor(Math.random() * player1Deck.length);
+var player1Card = player1Deck[pcv];
+var pcv2 = Math.floor(Math.random() * player2Deck.length);
+var player2Card = player2Deck[pcv2];
 
 function grabRand1 (player1Card) {
     return player1Card;
