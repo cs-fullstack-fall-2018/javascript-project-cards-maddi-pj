@@ -72,12 +72,12 @@ var player2Card = player2Deck[pcv2];
 
 function grabRand1 (player1Card) {
 
-    return player1Card;
+    return player1Card + player2Card;
 }
 
-function grabRan2 (player2Card){
-    return player2Card;
-}
+// function grabRan2 (player2Card){
+//     return player2Card;
+// }
 
 //Genertates new Set of Cards
 function reset() {
