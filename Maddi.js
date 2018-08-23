@@ -111,11 +111,17 @@ function reset() {
         let tmp = cards[rand1];
         cards[rand1] = cards[rand2];
         cards[rand2] = tmp;
+        var player1Deck = [];
+        var player2Deck = [];
+
+        player1Deck = cards.slice();
+        player2Deck = player1Deck.splice(1, 26);
     }
+
+
     document.getElementById("P1Score").innerText=0;
     document.getElementById("P2Score").innerText=0;
     console.log(player1Deck);
     console.log(player2Deck);
-
 }
 resetButton.addEventListener("click", reset);
