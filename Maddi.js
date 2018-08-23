@@ -69,6 +69,7 @@ console.log(player2Deck);
 //
 // var pcv2 = Math.floor(Math.random() * player2Deck.length);
 // var player2Card = player2Deck[pcv2];
+var resetButton = document.getElementById("reset");
 
 var player1Card;
 var player2Card;
@@ -91,7 +92,7 @@ function grabRand1 () {
 //     return player2Card;
 // }
 
-//Genertates new Set of Cards
+//Genertates new Set of Cards and resets scores. this function will be applied to reset button
 function reset() {
     var cards = new Array();
     var typeArray = ["s", "d", "c", "h"];
@@ -111,4 +112,10 @@ function reset() {
         cards[rand1] = cards[rand2];
         cards[rand2] = tmp;
     }
+    document.getElementById("P1Score").innerText=0;
+    document.getElementById("P2Score").innerText=0;
+    console.log(player1Deck);
+    console.log(player2Deck);
+
 }
+resetButton.addEventListener("click", reset);
