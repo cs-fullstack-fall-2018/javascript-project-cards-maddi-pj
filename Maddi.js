@@ -66,35 +66,37 @@ console.log(player2Deck);
 //Function to randomly grab cards for player
 var pcv = Math.floor(Math.random() * player1Deck.length);
 var player1Card = player1Deck[pcv];
+
 var pcv2 = Math.floor(Math.random() * player2Deck.length);
 var player2Card = player2Deck[pcv2];
 
 function grabRand1 (player1Card) {
-    return player1Card;
+
+    return player1Card + player2Card;
 }
 
-function grabRan2 (player2Card){
-    return player2Card;
-}
+// function grabRan2 (player2Card){
+//     return player2Card;
+// }
+
 //Genertates new Set of Cards
-// var cards = new Array();
-// var typeArray = ["s", "d", "c", "h"];
-// var cardNumberArray = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"];
-//
-// for(let i=0; i <typeArray.length; i++)
-// {
-//     for(let x=0; x <cardNumberArray.length; x++)
-//     {
-//         let card = {cardNumber: cardNumberArray[x], type: typeArray[i]};
-//         cards.push(card);
-//     }
-// }
-//
-// for (var i=0; i < 10000; i++)
-// {
-//     let rand1 = Math.floor((Math.random() * cards.length));
-//     let rand2 = Math.floor((Math.random() * cards.length));
-//     let tmp = cards[rand1];
-//     cards[rand1] = cards[rand2];
-//     cards[rand2] = tmp;
-// }
+function reset() {
+    var cards = new Array();
+    var typeArray = ["s", "d", "c", "h"];
+    var cardNumberArray = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"];
+
+    for (let i = 0; i < typeArray.length; i++) {
+        for (let x = 0; x < cardNumberArray.length; x++) {
+            let card = {cardNumber: cardNumberArray[x], type: typeArray[i]};
+            cards.push(card);
+        }
+    }
+
+    for (var i = 0; i < 10000; i++) {
+        let rand1 = Math.floor((Math.random() * cards.length));
+        let rand2 = Math.floor((Math.random() * cards.length));
+        let tmp = cards[rand1];
+        cards[rand1] = cards[rand2];
+        cards[rand2] = tmp;
+    }
+}
